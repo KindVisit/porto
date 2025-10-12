@@ -1,0 +1,11 @@
+export const CONFIG = {
+  STORAGE_KEY: 'KindVisit.search',
+  SCROLL_THRESHOLD: 4,
+  DEFAULT_LOCATION: 'Porto, Portugal',
+  MIN_ADULTS: 1,
+  MIN_CHILDREN: 0,
+  MIN_CHILD_AGE: 0,
+  MAX_CHILD_AGE: 17,
+  DEFAULT_ADULTS: 1,
+  DEFAULT_CHILDREN: 0,
+};

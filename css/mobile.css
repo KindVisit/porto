@@ -1,0 +1,312 @@
+/* ===========================
+   ImpactTrip — Mobile Overrides
+   Breakpoint: max-width: 900px
+   =========================== */
+
+/* ===== Base / Layout ===== */
+
+/* Remove o spacer do desktop em mobile */
+body::before{ display:none; height:0 !important; }
+
+/* Evita espaço fantasma no topo */
+.home-wrap,
+.container-two{ padding-top: 0 !important; margin-top: 0 !important; }
+
+:root{
+  --header-top-gap: 0px;
+  --aside-w: 100%;
+  --aside-gap: 0;
+}
+
+/* ===== Header (logo centrado + hamburger no canto) ===== */
+
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background: #fff;
+  padding: 12px 12px; /* espaço para o botão e logo */
+}
+
+.site-header,
+.header-row{ overflow: visible !important; }
+
+.header-row{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+/* Logo centrado */
+.site-header .brand{
+  margin: 0 auto;
+  text-align: center;
+  flex: 0 0 auto !important;
+  display: flex;
+  align-items: center;
+}
+.site-header .brand img{
+  height: 70px !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hamburger fixo no canto superior direito */
+.site-header .hamburger{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 22px; line-height: 1;
+}
+.site-header .hamburger[aria-expanded="true"]{ background:#f3f4f6; }
+
+/* Esconder utilidades do desktop no mobile (apenas dentro do header) */
+.utility-bar{ display: none; }
+.site-header #form-min,
+.site-header .search-pill,
+.site-header .pill-close,
+.site-header .utility-bar,
+.site-header .pill-menu,
+.site-header .pill-actions,
+.site-header .pill-action,
+.site-header #menu-fab{
+  display: none !important;
+}
+
+/* ===== Menu móvel (popover compacto) ===== */
+
+/* Overlay (fecha ao clicar fora) */
+.mobile-drawer{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.25);
+  opacity: 0; pointer-events: none; transition: opacity .18s ease;
+}
+.mobile-drawer.open{ opacity: 1; pointer-events: auto; }
+
+/* Painel como popover, ancorado ao botão */
+.mobile-drawer .panel{
+  position: absolute;
+  top: calc(12px + 40px + 8px); /* padding top + altura botão + gap */
+  right: 12px;
+  bottom: auto;
+  width: 240px;
+  max-height: none;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  padding: 10px;
+  transform: translateY(-6px);
+  transition: transform .18s ease, opacity .18s ease;
+  opacity: 0;
+}
+.mobile-drawer.open .panel{ transform: translateY(0); opacity: 1; }
+
+.mobile-drawer .panel .title{
+  font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;
+}
+.mobile-drawer .panel .mobile-nav{ display: grid; gap: 8px; }
+.mobile-drawer .panel .mobile-nav a{
+  display: block;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none; color: var(--text);
+}
+.mobile-drawer .panel .mobile-nav a.btn-primary{ border-color: transparent; }
+
+/* ===== Datepicker (2 meses em coluna) ===== */
+
+.drp-popover{
+  z-index: 3000 !important;
+  max-width: none;
+  width: calc(100vw - 24px); /* margem de 12px de cada lado */
+}
+
+.drp-calwrap{
+  display: grid;
+  grid-template-columns: 1fr; /* meses empilhados */
+  gap: 12px;
+  min-width: 0 !important; /* override ao desktop */
+}
+
+.drp-cal{ width: 100%; }
+
+/* ===== Form (empilhado + colapsável) ===== */
+
+.search-pill{
+  grid-column: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+.search-pill.is-collapsed{ display: none; }
+
+.search-pill .field{ display: grid; gap: 6px; }
+.search-pill .lbl{ text-align: left; }
+
+.pill-close{
+  display: inline-flex;
+  align-items: center; justify-content:center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--border); background:#fff;
+  margin-left: auto;
+}
+
+/* Barra resumo (caso seja usada fora do header) */
+.form-min{
+  display: flex; align-items: center; gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid var(--border); border-radius: 12px;
+  background:#fff; padding: 10px 12px;
+  font: inherit; text-align: left; cursor: pointer;
+}
+.form-min .dot{ width:6px; height:6px; border-radius:50%; background:var(--brand-green); }
+.form-min .txt{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.form-min[aria-expanded="true"]{ background:#f9fafb; }
+
+/* ===== Conteúdo / Layout principal ===== */
+
+.hero .container{ padding: 0 12px; }
+.hero-headline{ font-size: clamp(1.4rem, 5vw, 1.8rem); }
+.hero-tagline{ font-size: .95rem; }
+
+.container-two{
+  max-width: 100%;
+  padding: 0 12px;
+  display: block;
+}
+.home-main{ width: 100%; }
+.aside{ position: static; width: 100%; margin-top: 18px; }
+.aside-scroll{ position: static; max-height: none; }
+
+/* ===== Secções / Rails ===== */
+
+.section-head{ gap: 8px; }
+.section-head h2{ font-size: 1.1rem; }
+
+/* Todos os rails em horizontal com snap */
+.section .rail{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 76%;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 6px 2px 8px;
+  scroll-snap-type: x proximity;
+}
+.section .rail > *{ scroll-snap-align: start; }
+
+/* Esconder seta “next” no mobile (scroll com o dedo) */
+.section .rail-next,
+button.rail-next{ display: none !important; }
+
+/* Cards ocupam a largura disponível */
+.card-op,
+.card-submit{
+  width: 100%;
+  min-width: auto;
+  margin: 8px 0;
+}
+
+/* ===== Hotels ===== */
+
+.hotels-rail{ display: grid; gap: 10px; }
+.hotel-card{ display: grid; grid-template-columns: 96px 1fr; gap: 10px; }
+.hotel-card img{ width: 96px; height: 72px; object-fit: cover; }
+
+/* ===== Footer ===== */
+
+.footer-bar{
+  display: grid; gap: 10px;
+  align-items: center;
+  padding: 16px 12px;
+}
+.footer-links{
+  display: flex; flex-wrap: wrap; gap: 10px 14px;
+  padding: 0; margin: 0; list-style: none;
+}
+.footer-links a{ white-space: nowrap; }
+.footer-copy{ text-align: right; }
+
+
+/* === Fix 1: Header sempre visível no topo (mobile) === */
+:root{ --m-header-h: 94px; } /* ~70px do logo + 24px de padding vertical */
+
+.site-header{
+  position: fixed;      /* em vez de sticky */
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 1100;        /* abaixo do calendário (3000) */
+}
+
+/* Dá espaço ao conteúdo para não ir por baixo do header fixo */
+body,
+.home-wrap,
+.container-two{
+  padding-top: var(--m-header-h) !important;
+}
+
+/* altura mínima coerente para a linha do header */
+.header-row{
+  min-height: calc(var(--m-header-h) - 24px); /* header - padding vertical (12+12) */
+}
+
+
+/* === Fix 2: Logo perfeitamente centrado, independentemente do hamburger === */
+.header-row{ position: relative; }
+
+.site-header .brand{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;                  /* ignora auto-centering via margens */
+  flex: 0 0 auto !important;  /* não estica */
+}
+
+.site-header .brand img{
+  max-height: 70px;   /* limite de altura */
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+/* O hamburger mantém-se no canto superior direito como já tens */
+.site-header .hamburger{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.hero .container{
+  padding-top: 12px;   /* em vez de herdar demasiado padding */
+  padding-bottom: 12px;
+}
+.hero-tagline{ margin-bottom: 0.5rem; } /* mais compacto */
+
+body{ padding-top: var(--m-header-h) !important; }  /* mantém o espaçamento global */
+.home-wrap,
+.container-two{ padding-top: 0 !important; }        /* NÃO somar offset aqui */
+
+/* === Logo: rácio intacto e nitidez no mobile (override total) === */
+.site-header .brand img{
+  max-width: none !important;  /* ignora max-width:100% global */
+  width: auto !important;      /* largura pela proporção natural */
+  height: auto !important;     /* altura pela proporção natural */
+  max-height: 70px !important; /* limite de altura sem distorcer */
+  object-fit: contain !important; /* só por segurança, não recorta */
+  image-rendering: auto;       /* nitidez normal */
+}

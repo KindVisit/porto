@@ -1,0 +1,58 @@
+[
+  {
+    "id": "beach-clean",
+    "section": "nature",
+    "title": "Beach Clean-up – Foz do Douro",
+    "org": "Surfrider Porto",
+    "summary": "2–3h coastal clean with light sorting & micro-audit.",
+    "description": "Safety briefing, gloves/bags provided, simple categorisation (plastics, glass, mixed). Great for families; contributes to NGO datasets.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 8,
+    "fee": "€4",
+    "image": "assets/sample/beach.jpg",
+    "tags": ["outdoor","family-friendly"]
+  },
+  {
+    "id": "riverbank-survey",
+    "section": "nature",
+    "title": "Riverbank Litter Snapshot",
+    "org": "Visit Porto with NGOs",
+    "summary": "Photo-map hotspots and tally micro-plastics on short sections.",
+    "description": "Light citizen-science: geotag photos, note litter types/volumes. Results feed local partners to track pollution patterns.",
+    "duration": "2h",
+    "languages": ["PT","EN","ES"],
+    "minAge": 12,
+    "fee": "€4",
+    "image": "assets/sample/river.jpg",
+    "tags": ["outdoor","citizen-science"]
+  },
+  {
+    "id": "community-gardens",
+    "section": "nature",
+    "title": "Community Gardens Boost",
+    "org": "Horta à Porta / local gardens",
+    "summary": "Weeding, mulching, native planting in open garden sessions.",
+    "description": "Seasonal tasks; tools provided. No experience needed. Helps gardens stay healthy between municipal rounds.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 10,
+    "fee": "€4",
+    "image": "assets/sample/green.jpg",
+    "tags": ["outdoor"]
+  },
+  {
+    "id": "invasive-removal",
+    "section": "nature",
+    "title": "Invasive Plants – Serras do Porto",
+    "org": "KindVisit partner",
+    "summary": "Supervised removal (acacia/mimosa) + planting native saplings.",
+    "description": "Training and PPE on site. Moderate activity; aim is to restore small patches while documenting impact.",
+    "duration": "half",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€6",
+    "image": "assets/sample/forest.jpg",
+    "tags": ["outdoor","seasonal"]
+  }
+]

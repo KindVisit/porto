@@ -1,0 +1,44 @@
+[
+  {
+    "id": "shelter-walks",
+    "section": "animals",
+    "title": "Shelter Socialization & Walks",
+    "org": "Local Animal Shelter",
+    "summary": "Dog walking, cat socialization, light kennel clean-up.",
+    "description": "On-site briefing and animal handling basics. Wear closed shoes; tasks assigned by staff.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€5",
+    "image": "assets/sample/dogs.jpg",
+    "tags": ["outdoor","animal-care"]
+  },
+  {
+    "id": "adoption",
+    "section": "animals",
+    "title": "Animal adoption",
+    "org": "KindVisit partner",
+    "summary": "Take simple portraits to improve adoption profiles.",
+    "description": "We supply a quick shot-list; smartphones are fine. Optional light editing guidance.",
+    "duration": "1–2h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€4",
+    "image": "assets/sample/photo.jpg",
+    "tags": ["indoor","creative"]
+  },
+  {
+    "id": "supplies-drive",
+    "section": "animals",
+    "title": "Supplies Drive & Drop",
+    "org": "Animais de Rua / partners",
+    "summary": "Buy/bring food or meds; help sort and label donations.",
+    "description": "We’ll share up-to-date needs per shelter (food, blankets, dewormers). Great if you can’t commit to a shift.",
+    "duration": "1–2h",
+    "languages": ["Any"],
+    "minAge": 10,
+    "fee": "€0",
+    "image": "assets/sample/supplies.jpg",
+    "tags": ["donation"]
+  }
+]

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KindVisit – Porto Pilot</title>
+  <meta name="description" content="KindVisit connects travelers with local volunteer opportunities in Porto. Make your trip matter." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 900px)">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#24466F">
+
+  <!-- Social sharing -->
+  <meta property="og:title" content="KindVisit – Porto Pilot">
+  <meta property="og:description" content="Connecting travelers with volunteer opportunities in Porto. Make your trip matter.">
+  <meta property="og:image" content="assets/logoh.png">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+<!-- ===========================
+     Header
+     =========================== -->
+<header class="site-header">
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <nav class="utility-nav" aria-label="Utility">
+        <a href="#" class="link link-ghost">Login</a>
+        <a href="#" class="btn btn-outline btn-xs">Sign up</a>
+        <a href="#" class="btn btn-primary btn-xs">Donate</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="header-row">
+    <a class="brand" href="/"><img src="assets/logoh.png" alt="KindVisit" /></a>
+
+    <button id="hamburger" class="hamburger" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu">☰</button>
+
+    <button id="form-min" class="form-min" type="button" aria-expanded="false">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="txt">Select dates · 1A</span>
+    </button>
+
+
+    <form id="pilot-form" class="search-pill" autocomplete="off">
+      <label class="field">
+        <span class="lbl">Location</span>
+        <select id="location"><option>Porto, Portugal</option></select>
+      </label>
+
+      <label class="field field-daterange">
+        <span class="lbl">Date</span>
+        <input id="date-range-display" class="daterange-display" type="text" readonly placeholder="Select dates" />
+        <input id="date-start" type="hidden" />
+        <input id="date-end" type="hidden" />
+      </label>
+
+      <label class="field">
+        <span class="lbl">Language</span>
+        <select id="language">
+          <option value="Any">Any</option>
+          <option value="PT">PT</option>
+          <option value="EN">EN</option>
+          <option value="ES">ES</option>
+          <option value="FR">FR</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="lbl">Duration</span>
+        <select id="duration">
+          <option value="any">Any</option>
+          <option value="1h">1h</option>
+          <option value="2–3h">2–3h</option>
+          <option value="half">Half day</option>
+          <option value="full">Full day</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="lbl">Adults</span>
+        <input id="adults" type="number" min="1" value="1" />
+      </label>
+
+      <label class="field">
+        <span class="lbl">Children</span>
+        <input id="children" type="number" min="0" value="0" />
+      </label>
+
+      <button class="pill-action" type="submit" id="btn-search" aria-label="Apply filters">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path d="M15.8 14.4l4.6 4.6-1.4 1.4-4.6-4.6a7 7 0 1 1 1.4-1.4zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" fill="currentColor"/>
+        </svg>
+      </button>
+
+      <div id="children-ages" class="child-ages"></div>
+
+      <button type="button" class="pill-close" id="pill-close" aria-label="Close filters">✕</button>
+
+    </form>
+  </div>
+
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+  <div class="panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="title">Menu</div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <!-- Utiliza as mesmas ações da utility-bar -->
+      <a href="#" class="link link-ghost">Login</a>
+      <a href="#" class="btn btn-outline btn-xs">Sign up</a>
+      <a href="#" class="btn btn-primary btn-xs">Donate</a>
+    </nav>
+  </div>
+</div>
+
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-headline">Make your trip matter.</h1>
+    <p class="hero-tagline">
+      KindVisit connects visitors to local volunteer projects – environment, education, culture, and social aid.
+    </p>
+  </div>
+</section>
+
+<main class="home">
+  <div class="home-wrap container-two">
+    <div class="home-main">
+      <section class="section" id="sec-nature">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Nature &amp; Environment</h2>
+          <button class="rail-next" data-target="rail-nature" aria-label="Next" aria-controls="rail-nature" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-nature"></div>
+      </section>
+
+      <section class="section" id="sec-social">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Social Causes &amp; Community Support</h2>
+          <button class="rail-next" data-target="rail-social" aria-label="Next" aria-controls="rail-social" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-social"></div>
+      </section>
+
+      <section class="section" id="sec-culture">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Culture &amp; Education</h2>
+          <button class="rail-next" data-target="rail-culture" aria-label="Next" aria-controls="rail-culture" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-culture"></div>
+      </section>
+
+      <section class="section" id="sec-events">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Events &amp; Experiences</h2>
+          <button class="rail-next" data-target="rail-events" aria-label="Next" aria-controls="rail-events" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-events"></div>
+      </section>
+
+      <section class="section" id="sec-crowd">
+        <div class="section-head">
+          <h2>Crowdfunding &amp; Campaigns</h2>
+          <button class="rail-next" data-target="rail-crowd" aria-label="Next" aria-controls="rail-crowd" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-crowd"></div>
+      </section>
+
+      <section class="section" id="sec-animals">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Animals &amp; Welfare</h2>
+          <button class="rail-next" data-target="rail-animals" aria-label="Next" aria-controls="rail-animals" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-animals"></div>
+      </section>
+
+      <section class="section" id="sec-homeless">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Homeless Support</h2>
+          <button class="rail-next" data-target="rail-homeless" aria-label="Next" aria-controls="rail-homeless" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-homeless"></div>
+      </section>
+
+      <section class="section" id="sec-seniors">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Seniors</h2>
+          <button class="rail-next" data-target="rail-seniors" aria-label="Next" aria-controls="rail-seniors" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-seniors"></div>
+      </section>
+
+      <section class="section" id="sec-education">
+        <div class="section-sep"></div>
+        <div class="section-head">
+          <h2>Education &amp; Youth</h2>
+          <button class="rail-next" data-target="rail-education" aria-label="Next" aria-controls="rail-education" title="Next">➜</button>
+        </div>
+        <div class="rail" id="rail-education"></div>
+      </section>
+    </div>
+
+<aside class="home-aside" id="hotels-aside">
+  <div class="aside-head">
+    <h3>Where to stay</h3>
+    <div class="aside-dates" id="hotels-dates">Select dates</div>
+  </div>
+
+  <div class="aside-scroll">
+    <div class="hotels-rail" id="rail-hotels"></div>
+  </div>
+</aside>
+
+</div> <!-- closes .home-wrap.container-two -->
+</main>
+
+<footer>
+  <div class="footer-bar">
+    <ul class="footer-links">
+      <li><a href="#">Opportunities</a></li>
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">Impact</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Submit your project</a></li>
+      <li><a href="#">NGO onboarding</a></li>
+      <li><a href="#">Hotels & Agencies</a></li>
+      <li><a href="#">Press kit</a></li>
+    </ul>
+    <div class="footer-copy">© KindVisit 2025</div>
+  </div>
+</footer>
+
+
+<!-- ===========================
+     Opportunity Modal
+     =========================== -->
+<div id="op-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="opm-title">
+  <div class="modal-backdrop" data-opm-close></div>
+  <div class="modal-card" role="document">
+    <button class="modal-close" type="button" aria-label="Close" data-opm-close>✕</button>
+
+    <div class="opm-header">
+      <img id="opm-image" src="" alt="" />
+      <div class="opm-headtext">
+        <h3 id="opm-title"></h3>
+        <div id="opm-org" class="muted"></div>
+      </div>
+      <div class="opm-fee" id="opm-fee"></div>
+    </div>
+
+    <div class="opm-body">
+      <p id="opm-desc"></p>
+      <ul class="opm-details">
+        <li><strong>Duration:</strong> <span id="opm-duration"></span></li>
+        <li><strong>Languages:</strong> <span id="opm-langs"></span></li>
+        <li><strong>Minimum age:</strong> <span id="opm-age"></span></li>
+        <li class="opm-tags"><strong>Tags:</strong> <span id="opm-tags"></span></li>
+      </ul>
+    </div>
+
+    <div class="opm-actions">
+      <button class="btn btn-outline" type="button" data-opm-close>Close</button>
+      <a id="opm-cta" href="#" class="btn btn-primary">I want to help</a>
+    </div>
+  </div>
+</div>
+
+<!-- Site scripts -->
+<script type="module">
+  import './js/main.js';
+  import './js/filters.js';
+  import './js/rails.js';
+  import './js/hotels.js';
+  import './js/dateRangePicker.js'
+</script>
+</body>
+</html>

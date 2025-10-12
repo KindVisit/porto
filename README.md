@@ -1,0 +1,1 @@
+A pilot platform of KindVisit in Porto. It connects travelers, hotels and NGOs with local volunteer opportunities, turning tourism into a positive force for the community. Features include simple onboarding, activity browsing, and partner integration.

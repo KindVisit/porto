@@ -1,0 +1,30 @@
+[
+  {
+    "id": "festival-helper",
+    "section": "events",
+    "title": "Festival / Marathon Helper",
+    "org": "Event Organizer",
+    "summary": "Water points, wayfinding, or guest information.",
+    "description": "Event brief on arrival; be ready to stand/move. Schedules vary by event calendar.",
+    "duration": "2–4h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/festival.jpg",
+    "tags": ["event","outdoor"]
+  },
+  {
+    "id": "zero-waste",
+    "section": "events",
+    "title": "Zero-Waste Crew",
+    "org": "KindVisit partner",
+    "summary": "Sorting stations and gentle “bring-your-cup” nudges.",
+    "description": "Only when event partners provide proper sorting and oversight. Gloves and signage provided.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€4",
+    "image": "assets/sample/zerowaste.jpg",
+    "tags": ["event","sustainability"]
+  }
+]

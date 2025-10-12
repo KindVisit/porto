@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fundraising-workshop",
+    "section": "crowd",
+    "title": "Fundraising Workshops",
+    "org": "KindVisit partner",
+    "summary": "Creative workshops (cooking, crafts, music) supporting NGOs.",
+    "description": "Join a hands-on workshop with a local artisan or cook. Your fee is split fairly between the instructor and a partner cause.",
+    "duration": "2h",
+    "languages": ["PT","EN"],
+    "minAge": 12,
+    "fee": "€15–20",
+    "image": "assets/sample/workshop.jpg",
+    "tags": ["creative","fundraising"]
+  },
+  {
+    "id": "bike",
+    "section": "crowd",
+    "title": "Bike for a Cause",
+    "org": "Local Guides",
+    "summary": "Half-day cycle tour, guided, with proceeds donated.",
+    "description": "Explore Porto cycling with a local guide. Margin after costs goes directly to a chosen social or environmental project.",
+    "duration": "half",
+    "languages": ["PT","EN","ES"],
+    "minAge": 14,
+    "fee": "€25–30",
+    "image": "assets/sample/bike.jpg",
+    "tags": ["outdoor","fundraising"]
+  },
+  {
+    "id": "kayak",
+    "section": "crowd",
+    "title": "Kayak for a Cause",
+    "org": "Local Guides",
+    "summary": "Half-day kayak tour, guided, with proceeds donated.",
+    "description": "Explore Porto’s river or green belt with a local guide. Margin after costs goes directly to a chosen social or environmental project.",
+    "duration": "half",
+    "languages": ["PT","EN","ES"],
+    "minAge": 14,
+    "fee": "€25–30",
+    "image": "assets/sample/kayak.jpg",
+    "tags": ["outdoor","fundraising"]
+  },
+  {
+    "id": "street-fundraising",
+    "section": "crowd",
+    "title": "Street Fundraising Team",
+    "org": "KindVisit partner",
+    "summary": "Support local NGOs by joining supervised street fundraising drives.",
+    "description": "Be part of an official, transparent street fundraising action for causes like food security or animal welfare. Orientation included.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 18,
+    "fee": "€2",
+    "image": "assets/sample/street.jpg",
+    "tags": ["fundraising","outdoor"]
+  }
+]

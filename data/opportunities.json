@@ -1,0 +1,541 @@
+[
+  {
+    "id": "food-rescue",
+    "section": "social",
+    "title": "Food Rescue with Re-distribution Partners",
+    "org": "Re-food / Local NGOs",
+    "summary": "Evening shifts to collect surplus meals, sort and pack for delivery.",
+    "description": "Join a small, well-briefed team to pick up surplus food from cafés and restaurants, help with basic sorting, and load boxes for delivery to families. Simple, practical tasks with local coordinators.",
+    "duration": "2h",
+    "languages": [
+      "PT",
+      "EN",
+      "ES"
+    ],
+    "minAge": 14,
+    "fee": "€4",
+    "image": "assets/sample/food.jpg",
+    "tags": [
+      "indoor",
+      "practical"
+    ]
+  },
+  {
+    "id": "community-kitchen",
+    "section": "social",
+    "title": "Community Kitchen Support",
+    "org": "Parish / NGO",
+    "summary": "Prep, simple cooking, plating, and service with local NGOs/parishes.",
+    "description": "Help prepare hot meals for people facing food insecurity. Tasks vary by shift (chopping, plating, serving, clean-down). Briefing and hygiene guidance provided.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€5",
+    "image": "assets/sample/kitchen.jpg",
+    "tags": [
+      "indoor",
+      "team"
+    ]
+  },
+  {
+    "id": "hygiene-kits",
+    "section": "social",
+    "title": "Welcome Kits & Hygiene Packs",
+    "org": "KindVisit partner",
+    "summary": "Assemble hygiene kits and lightweight care packs for vulnerable families.",
+    "description": "Quick, family-friendly impact. Help sort donated items and assemble packs (toothbrush, soap, toiletries) for distribution through local partners.",
+    "duration": "1–2h",
+    "languages": [
+      "Any"
+    ],
+    "minAge": 10,
+    "fee": "€3",
+    "image": "assets/sample/kits.jpg",
+    "tags": [
+      "family-friendly",
+      "indoor"
+    ]
+  },
+  {
+    "id": "beach-clean",
+    "section": "nature",
+    "title": "Beach Clean-up – Foz do Douro",
+    "org": "Surfrider Porto",
+    "summary": "2–3h coastal clean with light sorting & micro-audit.",
+    "description": "Safety briefing, gloves/bags provided, simple categorisation (plastics, glass, mixed). Great for families; contributes to NGO datasets.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 8,
+    "fee": "€4",
+    "image": "assets/sample/beach.jpg",
+    "tags": [
+      "outdoor",
+      "family-friendly"
+    ]
+  },
+  {
+    "id": "riverbank-survey",
+    "section": "nature",
+    "title": "Riverbank Litter Snapshot",
+    "org": "Visit Porto with NGOs",
+    "summary": "Photo-map hotspots and tally micro-plastics on short sections.",
+    "description": "Light citizen-science: geotag photos, note litter types/volumes. Results feed local partners to track pollution patterns.",
+    "duration": "2h",
+    "languages": [
+      "PT",
+      "EN",
+      "ES"
+    ],
+    "minAge": 12,
+    "fee": "€4",
+    "image": "assets/sample/river.jpg",
+    "tags": [
+      "outdoor",
+      "citizen-science"
+    ]
+  },
+  {
+    "id": "community-gardens",
+    "section": "nature",
+    "title": "Community Gardens Boost",
+    "org": "Horta à Porta / local gardens",
+    "summary": "Weeding, mulching, native planting in open garden sessions.",
+    "description": "Seasonal tasks; tools provided. No experience needed. Helps gardens stay healthy between municipal rounds.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 10,
+    "fee": "€4",
+    "image": "assets/sample/green.jpg",
+    "tags": [
+      "outdoor"
+    ]
+  },
+  {
+    "id": "invasive-removal",
+    "section": "nature",
+    "title": "Invasive Plants – Serras do Porto",
+    "org": "KindVisit partner",
+    "summary": "Supervised removal (acacia/mimosa) + planting native saplings.",
+    "description": "Training and PPE on site. Moderate activity; aim is to restore small patches while documenting impact.",
+    "duration": "half",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€6",
+    "image": "assets/sample/forest.jpg",
+    "tags": [
+      "outdoor",
+      "seasonal"
+    ]
+  },
+  {
+    "id": "conversation-cafe",
+    "section": "social",
+    "title": "Conversation Café for Migrants & Refugees",
+    "org": "Cruz Vermelha / JRS",
+    "summary": "Friendly PT/EN conversation circles focused on useful themes.",
+    "description": "Light facilitation; materials provided (topics, cards). Great for visitors who like people-to-people impact.",
+    "duration": "1h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/cafe.jpg",
+    "tags": [
+      "indoor",
+      "inclusive"
+    ]
+  },
+  {
+    "id": "digital-cv-help",
+    "section": "social",
+    "title": "Digital Basics & CV Help Drop-in",
+    "org": "KindVisit partner",
+    "summary": "Help residents with CV tweaks, email setup, and job portals.",
+    "description": "Short, practical guidance at a community hub. Simple checklists and templates supplied.",
+    "duration": "1–2h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 18,
+    "fee": "€4",
+    "image": "assets/sample/laptop.jpg",
+    "tags": [
+      "indoor",
+      "practical"
+    ]
+  },
+  {
+    "id": "senior-social",
+    "section": "seniors",
+    "title": "Senior Social Hour",
+    "org": "Community Center",
+    "summary": "60–90 min of games, music, or story time in small groups.",
+    "description": "Join existing sessions with a facilitator. Gentle pace; empathy and presence matter most.",
+    "duration": "1–1.5h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 14,
+    "fee": "€3",
+    "image": "assets/sample/seniors.jpg",
+    "tags": [
+      "indoor",
+      "low-intensity"
+    ]
+  },
+  {
+    "id": "tech-buddy",
+    "section": "seniors",
+    "title": "Tech Buddy for Video Calls",
+    "org": "KindVisit partner",
+    "summary": "Set up smartphones for calls, photos, and messaging with family.",
+    "description": "Step-by-step sheets provided. Very rewarding for seniors with family abroad.",
+    "duration": "1–2h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/tech.jpg",
+    "tags": [
+      "indoor",
+      "patience"
+    ]
+  },
+  {
+    "id": "shelter-walks",
+    "section": "animals",
+    "title": "Shelter Socialization & Walks",
+    "org": "Local Animal Shelter",
+    "summary": "Dog walking, cat socialization, light kennel clean-up.",
+    "description": "On-site briefing and animal handling basics. Wear closed shoes; tasks assigned by staff.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€5",
+    "image": "assets/sample/dogs.jpg",
+    "tags": [
+      "outdoor",
+      "animal-care"
+    ]
+  },
+  {
+    "id": "adoption",
+    "section": "animals",
+    "title": "Animal adoption",
+    "org": "KindVisit partner",
+    "summary": "Take simple portraits to improve adoption profiles.",
+    "description": "We supply a quick shot-list; smartphones are fine. Optional light editing guidance.",
+    "duration": "1–2h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€4",
+    "image": "assets/sample/photo.jpg",
+    "tags": [
+      "indoor",
+      "creative"
+    ]
+  },
+  {
+    "id": "supplies-drive",
+    "section": "animals",
+    "title": "Supplies Drive & Drop",
+    "org": "Animais de Rua / partners",
+    "summary": "Buy/bring food or meds; help sort and label donations.",
+    "description": "We’ll share up-to-date needs per shelter (food, blankets, dewormers). Great if you can’t commit to a shift.",
+    "duration": "1–2h",
+    "languages": [
+      "Any"
+    ],
+    "minAge": 10,
+    "fee": "€0",
+    "image": "assets/sample/supplies.jpg",
+    "tags": [
+      "donation"
+    ]
+  },
+  {
+    "id": "street-rounds",
+    "section": "homeless",
+    "title": "Evening Street Rounds",
+    "org": "CASA",
+    "summary": "Join an experienced team to distribute meals and essentials.",
+    "description": "Orientation covers respect, safety, and consent. You’ll help with warm drinks, light dialogue, and referrals.",
+    "duration": "2h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 18,
+    "fee": "€5",
+    "image": "assets/sample/homeless.jpg",
+    "tags": [
+      "outdoor",
+      "evening"
+    ]
+  },
+  {
+    "id": "warm-clothing",
+    "section": "homeless",
+    "title": "Warm Clothing & Blanket Sort",
+    "org": "KindVisit partner",
+    "summary": "Sort and prep winter items for targeted distribution.",
+    "description": "Size-labeling, pairing gloves/socks, quick quality checks. Low-barrier entry, high practical value.",
+    "duration": "1–2h",
+    "languages": [
+      "Any"
+    ],
+    "minAge": 12,
+    "fee": "€3",
+    "image": "assets/sample/clothes.jpg",
+    "tags": [
+      "indoor",
+      "winter"
+    ]
+  },
+  {
+    "id": "azulejo-survey",
+    "section": "culture",
+    "title": "Azulejo Photo-Surveys",
+    "org": "SOS Azulejo",
+    "summary": "1–2h self-guided route to geotag tiles and note condition.",
+    "description": "Use our map and micro-form. Photos feed an open archive; results shared back with partners.",
+    "duration": "1–2h",
+    "languages": [
+      "Any"
+    ],
+    "minAge": 10,
+    "fee": "€3",
+    "image": "assets/sample/tiles.jpg",
+    "tags": [
+      "self-guided",
+      "rainy-day"
+    ]
+  },
+  {
+    "id": "craft-visibility",
+    "section": "culture",
+    "title": "Craft Visibility Sprints",
+    "org": "KindVisit partner",
+    "summary": "Short photo/video snippets + translations for workshop blurbs.",
+    "description": "We’ll pair you with an artisan; capture “how-it’s-made” steps and help polish a short description.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€4",
+    "image": "assets/sample/craft.jpg",
+    "tags": [
+      "indoor",
+      "creative"
+    ]
+  },
+  {
+    "id": "oral-history",
+    "section": "culture",
+    "title": "Oral-History Capture",
+    "org": "KindVisit partner",
+    "summary": "Record residents’ stories (consent) and digitize old photos.",
+    "description": "Training on consent and scanning basics. Helps build neighborhood memory maps.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 18,
+    "fee": "€4",
+    "image": "assets/sample/history.jpg",
+    "tags": [
+      "indoor",
+      "storytelling"
+    ]
+  },
+  {
+    "id": "study-buddy",
+    "section": "education",
+    "title": "Study Buddy (Languages / Basics)",
+    "org": "G.A.S. Porto / VO.U.",
+    "summary": "60-min themed conversation circle or basic homework help.",
+    "description": "Materials and prompts provided; small-group setting with local facilitator.",
+    "duration": "1h",
+    "languages": [
+      "PT",
+      "EN",
+      "ES"
+    ],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/education.jpg",
+    "tags": [
+      "indoor",
+      "youth"
+    ]
+  },
+  {
+    "id": "library-digitization",
+    "section": "education",
+    "title": "Library & Archive Digitization",
+    "org": "KindVisit partner",
+    "summary": "Scan, name, and add metadata to documents/photos.",
+    "description": "Rain-friendly task; simple workstation workflow and checklist.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/library.jpg",
+    "tags": [
+      "indoor",
+      "archive"
+    ]
+  },
+  {
+    "id": "festival-helper",
+    "section": "events",
+    "title": "Festival / Marathon Helper",
+    "org": "Event Organizer",
+    "summary": "Water points, wayfinding, or guest information.",
+    "description": "Event brief on arrival; be ready to stand/move. Schedules vary by event calendar.",
+    "duration": "2–4h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/festival.jpg",
+    "tags": [
+      "event",
+      "outdoor"
+    ]
+  },
+  {
+    "id": "zero-waste",
+    "section": "events",
+    "title": "Zero-Waste Crew",
+    "org": "KindVisit partner",
+    "summary": "Sorting stations and gentle “bring-your-cup” nudges.",
+    "description": "Only when event partners provide proper sorting and oversight. Gloves and signage provided.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 16,
+    "fee": "€4",
+    "image": "assets/sample/zerowaste.jpg",
+    "tags": [
+      "event",
+      "sustainability"
+    ]
+  },
+  {
+    "id": "fundraising-workshop",
+    "section": "crowd",
+    "title": "Fundraising Workshops",
+    "org": "KindVisit partner",
+    "summary": "Creative workshops (cooking, crafts, music) supporting NGOs.",
+    "description": "Join a hands-on workshop with a local artisan or cook. Your fee is split fairly between the instructor and a partner cause.",
+    "duration": "2h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 12,
+    "fee": "€15–20",
+    "image": "assets/sample/workshop.jpg",
+    "tags": [
+      "creative",
+      "fundraising"
+    ]
+  },
+  {
+    "id": "bike",
+    "section": "crowd",
+    "title": "Bike for a Cause",
+    "org": "Local Guides",
+    "summary": "Half-day cycle tour, guided, with proceeds donated.",
+    "description": "Explore Porto cycling with a local guide. Margin after costs goes directly to a chosen social or environmental project.",
+    "duration": "half",
+    "languages": [
+      "PT",
+      "EN",
+      "ES"
+    ],
+    "minAge": 14,
+    "fee": "€25–30",
+    "image": "assets/sample/bike.jpg",
+    "tags": [
+      "outdoor",
+      "fundraising"
+    ]
+  },
+    {
+    "id": "kayak",
+    "section": "crowd",
+    "title": "Kayak for a Cause",
+    "org": "Local Guides",
+    "summary": "Half-day kayak tour, guided, with proceeds donated.",
+    "description": "Explore Porto’s river or green belt with a local guide. Margin after costs goes directly to a chosen social or environmental project.",
+    "duration": "half",
+    "languages": [
+      "PT",
+      "EN",
+      "ES"
+    ],
+    "minAge": 14,
+    "fee": "€25–30",
+    "image": "assets/sample/kayak.jpg",
+    "tags": [
+      "outdoor",
+      "fundraising"
+    ]
+  },
+  {
+    "id": "street-fundraising",
+    "section": "crowd",
+    "title": "Street Fundraising Team",
+    "org": "KindVisit partner",
+    "summary": "Support local NGOs by joining supervised street fundraising drives.",
+    "description": "Be part of an official, transparent street fundraising action for causes like food security or animal welfare. Orientation included.",
+    "duration": "2–3h",
+    "languages": [
+      "PT",
+      "EN"
+    ],
+    "minAge": 18,
+    "fee": "€2",
+    "image": "assets/sample/street.jpg",
+    "tags": [
+      "fundraising",
+      "outdoor"
+    ]
+  }
+]

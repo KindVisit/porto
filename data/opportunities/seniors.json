@@ -1,0 +1,30 @@
+[
+  {
+    "id": "senior-social",
+    "section": "seniors",
+    "title": "Senior Social Hour",
+    "org": "Community Center",
+    "summary": "60–90 min of games, music, or story time in small groups.",
+    "description": "Join existing sessions with a facilitator. Gentle pace; empathy and presence matter most.",
+    "duration": "1–1.5h",
+    "languages": ["PT","EN"],
+    "minAge": 14,
+    "fee": "€3",
+    "image": "assets/sample/seniors.jpg",
+    "tags": ["indoor","low-intensity"]
+  },
+  {
+    "id": "tech-buddy",
+    "section": "seniors",
+    "title": "Tech Buddy for Video Calls",
+    "org": "KindVisit partner",
+    "summary": "Set up smartphones for calls, photos, and messaging with family.",
+    "description": "Step-by-step sheets provided. Very rewarding for seniors with family abroad.",
+    "duration": "1–2h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/tech.jpg",
+    "tags": ["indoor","patience"]
+  }
+]

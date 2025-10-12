@@ -1,0 +1,56 @@
+[
+  {
+    "id": "htl-boutique-ribeira",
+    "name": "Boutique Hotel Ribeira",
+    "area": "Ribeira",
+    "currency": "€",
+    "pricePerNight": 112,
+    "thumb": "assets/sample/hotels/ribeira.jpg",
+    "affiliateUrl": "https://partner.example/book?hotel=ribeira&checkin={CHECKIN}&checkout={CHECKOUT}&adults={ADULTS}"
+  },
+  {
+    "id": "htl-aliados-city-stay",
+    "name": "Aliados City Stay",
+    "area": "Aliados",
+    "currency": "€",
+    "pricePerNight": 89,
+    "thumb": "assets/sample/hotels/aliados.jpg",
+    "affiliateUrl": "https://partner.example/book?hotel=aliados&checkin={CHECKIN}&checkout={CHECKOUT}&adults={ADULTS}"
+  },
+  {
+    "id": "htl-foz-ocean-view",
+    "name": "Foz Ocean View Hotel",
+    "area": "Foz do Douro",
+    "currency": "€",
+    "pricePerNight": 135,
+    "thumb": "assets/sample/hotels/foz.jpg",
+    "affiliateUrl": "https://partner.example/book?hotel=foz&checkin={CHECKIN}&checkout={CHECKOUT}&adults={ADULTS}"
+  },
+  {
+    "id": "htl-boavista-park",
+    "name": "Boavista Park Hotel",
+    "area": "Boavista",
+    "currency": "€",
+    "pricePerNight": 98,
+    "thumb": "assets/sample/hotels/boavista.jpg",
+    "affiliateUrl": "https://partner.example/book?hotel=boavista&checkin={CHECKIN}&checkout={CHECKOUT}&adults={ADULTS}"
+  },
+  {
+    "id": "htl-cedofeita-garden-suites",
+    "name": "Cedofeita Garden Suites",
+    "area": "Cedofeita",
+    "currency": "€",
+    "pricePerNight": 105,
+    "thumb": "assets/sample/hotels/cedofeita.jpg",
+    "affiliateUrl": "https://partner.example/book?hotel=cedofeita&checkin={CHECKIN}&checkout={CHECKOUT}&adults={ADULTS}"
+  },
+  {
+    "id": "htl-bonfim-art-apartments",
+    "name": "Bonfim Art Apartments",
+    "area": "Bonfim",
+    "currency": "€",
+    "pricePerNight": 92,
+    "thumb": "assets/sample/hotels/bonfim.jpg",
+    "affiliateUrl": "https://partner.example/book?hotel=bonfim&checkin={CHECKIN}&checkout={CHECKOUT}&adults={ADULTS}"
+  }
+]

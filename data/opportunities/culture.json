@@ -1,0 +1,44 @@
+[
+  {
+    "id": "azulejo-survey",
+    "section": "culture",
+    "title": "Azulejo Photo-Surveys",
+    "org": "SOS Azulejo",
+    "summary": "1–2h self-guided route to geotag tiles and note condition.",
+    "description": "Use our map and micro-form. Photos feed an open archive; results shared back with partners.",
+    "duration": "1–2h",
+    "languages": ["Any"],
+    "minAge": 10,
+    "fee": "€3",
+    "image": "assets/sample/tiles.jpg",
+    "tags": ["self-guided","rainy-day"]
+  },
+  {
+    "id": "craft-visibility",
+    "section": "culture",
+    "title": "Craft Visibility Sprints",
+    "org": "KindVisit partner",
+    "summary": "Short photo/video snippets + translations for workshop blurbs.",
+    "description": "We’ll pair you with an artisan; capture “how-it’s-made” steps and help polish a short description.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€4",
+    "image": "assets/sample/craft.jpg",
+    "tags": ["indoor","creative"]
+  },
+  {
+    "id": "oral-history",
+    "section": "culture",
+    "title": "Oral-History Capture",
+    "org": "KindVisit partner",
+    "summary": "Record residents’ stories (consent) and digitize old photos.",
+    "description": "Training on consent and scanning basics. Helps build neighborhood memory maps.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 18,
+    "fee": "€4",
+    "image": "assets/sample/history.jpg",
+    "tags": ["indoor","storytelling"]
+  }
+]

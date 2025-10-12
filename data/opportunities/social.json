@@ -1,0 +1,72 @@
+[
+  {
+    "id": "food-rescue",
+    "section": "social",
+    "title": "Food Rescue with Re-distribution Partners",
+    "org": "Re-food / Local NGOs",
+    "summary": "Evening shifts to collect surplus meals, sort and pack for delivery.",
+    "description": "Join a small, well-briefed team to pick up surplus food from cafés and restaurants, help with basic sorting, and load boxes for delivery to families. Simple, practical tasks with local coordinators.",
+    "duration": "2h",
+    "languages": ["PT","EN","ES"],
+    "minAge": 14,
+    "fee": "€4",
+    "image": "assets/sample/food.jpg",
+    "tags": ["indoor","practical"]
+  },
+  {
+    "id": "community-kitchen",
+    "section": "social",
+    "title": "Community Kitchen Support",
+    "org": "Parish / NGO",
+    "summary": "Prep, simple cooking, plating, and service with local NGOs/parishes.",
+    "description": "Help prepare hot meals for people facing food insecurity. Tasks vary by shift (chopping, plating, serving, clean-down). Briefing and hygiene guidance provided.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€5",
+    "image": "assets/sample/kitchen.jpg",
+    "tags": ["indoor","team"]
+  },
+  {
+    "id": "hygiene-kits",
+    "section": "social",
+    "title": "Welcome Kits & Hygiene Packs",
+    "org": "KindVisit partner",
+    "summary": "Assemble hygiene kits and lightweight care packs for vulnerable families.",
+    "description": "Quick, family-friendly impact. Help sort donated items and assemble packs (toothbrush, soap, toiletries) for distribution through local partners.",
+    "duration": "1–2h",
+    "languages": ["Any"],
+    "minAge": 10,
+    "fee": "€3",
+    "image": "assets/sample/kits.jpg",
+    "tags": ["family-friendly","indoor"]
+  },
+  {
+    "id": "conversation-cafe",
+    "section": "social",
+    "title": "Conversation Café for Migrants & Refugees",
+    "org": "Cruz Vermelha / JRS",
+    "summary": "Friendly PT/EN conversation circles focused on useful themes.",
+    "description": "Light facilitation; materials provided (topics, cards). Great for visitors who like people-to-people impact.",
+    "duration": "1h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/cafe.jpg",
+    "tags": ["indoor","inclusive"]
+  },
+  {
+    "id": "digital-cv-help",
+    "section": "social",
+    "title": "Digital Basics & CV Help Drop-in",
+    "org": "KindVisit partner",
+    "summary": "Help residents with CV tweaks, email setup, and job portals.",
+    "description": "Short, practical guidance at a community hub. Simple checklists and templates supplied.",
+    "duration": "1–2h",
+    "languages": ["PT","EN"],
+    "minAge": 18,
+    "fee": "€4",
+    "image": "assets/sample/laptop.jpg",
+    "tags": ["indoor","practical"]
+  }
+]

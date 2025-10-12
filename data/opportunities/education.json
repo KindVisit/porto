@@ -1,0 +1,30 @@
+[
+  {
+    "id": "study-buddy",
+    "section": "education",
+    "title": "Study Buddy (Languages / Basics)",
+    "org": "G.A.S. Porto / VO.U.",
+    "summary": "60-min themed conversation circle or basic homework help.",
+    "description": "Materials and prompts provided; small-group setting with local facilitator.",
+    "duration": "1h",
+    "languages": ["PT","EN","ES"],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/education.jpg",
+    "tags": ["indoor","youth"]
+  },
+  {
+    "id": "library-digitization",
+    "section": "education",
+    "title": "Library & Archive Digitization",
+    "org": "KindVisit partner",
+    "summary": "Scan, name, and add metadata to documents/photos.",
+    "description": "Rain-friendly task; simple workstation workflow and checklist.",
+    "duration": "2–3h",
+    "languages": ["PT","EN"],
+    "minAge": 16,
+    "fee": "€3",
+    "image": "assets/sample/library.jpg",
+    "tags": ["indoor","archive"]
+  }
+]

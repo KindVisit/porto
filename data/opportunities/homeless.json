@@ -1,0 +1,30 @@
+[
+  {
+    "id": "street-rounds",
+    "section": "homeless",
+    "title": "Evening Street Rounds",
+    "org": "CASA",
+    "summary": "Join an experienced team to distribute meals and essentials.",
+    "description": "Orientation covers respect, safety, and consent. You’ll help with warm drinks, light dialogue, and referrals.",
+    "duration": "2h",
+    "languages": ["PT","EN"],
+    "minAge": 18,
+    "fee": "€5",
+    "image": "assets/sample/homeless.jpg",
+    "tags": ["outdoor","evening"]
+  },
+  {
+    "id": "warm-clothing",
+    "section": "homeless",
+    "title": "Warm Clothing & Blanket Sort",
+    "org": "KindVisit partner",
+    "summary": "Sort and prep winter items for targeted distribution.",
+    "description": "Size-labeling, pairing gloves/socks, quick quality checks. Low-barrier entry, high practical value.",
+    "duration": "1–2h",
+    "languages": ["Any"],
+    "minAge": 12,
+    "fee": "€3",
+    "image": "assets/sample/clothes.jpg",
+    "tags": ["indoor","winter"]
+  }
+]
