@@ -1,256 +1,312 @@
 /* ===========================
-   Mobile overrides (<=768px)
+   ImpactTrip — Mobile Overrides
+   Breakpoint: max-width: 900px
    =========================== */
 
-/* Basics */
+/* ===== Base / Layout ===== */
+
+/* Remove o spacer do desktop em mobile */
+body::before{ display:none; height:0 !important; }
+
+/* Evita espaço fantasma no topo */
+.home-wrap,
+.container-two{ padding-top: 0 !important; margin-top: 0 !important; }
+
 :root{
-  --pill-h: 56px;
-  --aside-w: auto;
-  --mobile-padding: clamp(12px, 4vw, 20px);
-  --touch-target: 44px;
-}
-*{ -webkit-tap-highlight-color: transparent; }
-body{ overflow-x: hidden; }
-
-/* HEADER */
-.utility-bar{ display:none !important; }          /* hide desktop row on mobile */
-.header-row{ padding:12px var(--mobile-padding); min-height:var(--touch-target); display:flex; align-items:center; }
-.brand img{ height:44px; width:auto; }
-
-/* Ensure the calendar floats above drawer actions and is clickable */
-.drp-popover{ z-index: 1000; pointer-events: auto; }
-.drawer .drp-popover.drp--mobile{ z-index: 1000; pointer-events: auto; }
-
-/* Keep drawer actions under it just in case */
-.drawer-actions{ z-index: 200; }
-
-/* Hamburger (mobile only) */
-.hamburger{
-  display:flex;
-  margin-left:auto;
-  width:38px; height:32px;
-  flex-direction:column; justify-content:space-between;
-  border:0; background:transparent; padding:4px; cursor:pointer;
-}
-.hamburger span{ display:block; height:3px; background:#1d3557; border-radius:3px; }
-
-/* Hide the desktop pill on mobile */
-.search-pill{ display:none !important; }
-
-/* HERO */
-.hero{ padding: 12px var(--mobile-padding) 8px; }
-.hero .container{ max-width:100%; padding: 8px 0; }
-
-/* LAYOUT / RAILS */
-.container-two{ max-width:100%; padding:0 var(--mobile-padding); display:block; }
-.section-head{ margin-bottom: 8px; }
-.rail-next{ display:none; }
-.cards-rail, .hotels-rail{
-  display:flex; gap:12px; overflow-x:auto; scroll-behavior:smooth;
-  padding:8px 4px 16px; margin:0 -4px;
-  -webkit-overflow-scrolling:touch; scrollbar-width:none; -ms-overflow-style:none;
-}
-.cards-rail::-webkit-scrollbar, .hotels-rail::-webkit-scrollbar{ display:none; }
-.card-op{ min-width:260px; flex-shrink:0; }
-
-/* ASIDE (Where to stay) stacked */
-.home-aside{
-  position:static; width:auto; background: var(--pill-bg);
-  border:1px solid var(--border); border-radius:16px; box-shadow: var(--shadow-sm);
-  margin:16px 0 0; display:flex; flex-direction:column; overflow:hidden;
-}
-.home-aside .aside-head{ padding:12px; border-bottom:1px solid var(--border); background:white; }
-.home-aside .aside-head h3{ font-size:1.25rem; line-height:1.2; margin:4px 0 0; }
-.home-aside .aside-scroll{ max-height:60vh; overflow:auto; padding:12px 16px; -webkit-overflow-scrolling:touch; }
-
-/* Hotel / Ad cards */
-.hotels-rail{ gap:10px; }
-.hotel-card{
-  display:grid; grid-template-columns:80px 1fr;
-  gap:10px; padding:8px; border-radius:10px; background:#fff; margin-bottom:8px;
-  box-shadow:0 1px 3px rgba(0,0,0,.1);
-}
-.hotel-card img{ width:80px; height:80px; border-radius:8px; object-fit:cover; }
-.hotel-card .meta{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
-.hotel-card .book{ margin-right:6px; padding:6px 12px; font-size:.85rem; border-radius:6px; white-space:nowrap; }
-.hotel-ad{ padding:10px; border-width:2px; border-radius:10px; }
-
-/* FOOTER full width */
-footer{ position:relative; z-index:50; width:100%; padding: var(--mobile-padding); margin-top:24px; }
-.footer-bar{ max-width:none; margin:0; padding:16px 0; text-align:center; }
-
-/* Submit card */
-.card-submit{ padding:18px 14px; border-radius:12px; margin:16px 0; box-shadow: var(--shadow-sm); }
-
-/* MODAL (compact) */
-.modal-card{ margin:6vh 12px; padding:12px; border-radius:12px; }
-.opm-header{ grid-template-columns:80px 1fr auto; gap:10px; }
-.opm-header img{ width:80px; height:60px; border-radius:8px; object-fit:cover; }
-
-/* DRAWER (hamburger menu) */
-.drawer{ position:fixed; inset:0; z-index:100; display:none; }
-.drawer.open{ display:block; }
-.drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.35); }
-.drawer-panel{
-  position:absolute; top:0; right:0; height:100%; width:min(88vw, 420px);
-  background:#fff; border-left:1px solid var(--border); box-shadow: var(--shadow-md);
-  display:flex; flex-direction:column;
-}
-.drawer-head{ display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid var(--border); }
-.drawer-close{ border:1px solid var(--border); background:#fff; border-radius:8px; padding:6px 10px; }
-
-.drawer-links{ list-style:none; margin:0; padding:12px 14px; display:grid; gap:8px; }
-.drawer-links a{ text-decoration:none; color:var(--brand-blue); }
-
-.drawer-sep{ height:1px; background:var(--border); margin:6px 0; }
-.drawer-filters{ padding:12px 14px; display:grid; gap:10px; }
-.drawer-filters label{ display:grid; gap:4px; }
-.drawer-filters .two{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.drawer-filters select, .drawer-filters input{ height:38px; padding:6px 10px; }
-.drawer-actions{ display:flex; justify-content:space-between; gap:10px; margin-top:6px; }
-
-/* Accessibility niceties */
-@media (prefers-reduced-motion: reduce){
-  *, .hotel-card{ transition:none !important; animation:none !important; }
-}
-button:focus, input:focus, select:focus, a:focus{ outline:2px solid var(--primary-color, #007bff); outline-offset:2px; }
-
-/* Very small screens (<=375px) */
-@media (max-width:375px){
-  :root{ --mobile-padding:12px; }
-  .card-op{ min-width:240px; }
-  .hotel-card{ grid-template-columns:72px 1fr; gap:8px; }
-  .hotel-card img{ width:72px; height:72px; }
+  --header-top-gap: 0px;
+  --aside-w: 100%;
+  --aside-gap: 0;
 }
 
-/* ===== Drawer polish (mobile) ===== */
+/* ===== Header (logo centrado + hamburger no canto) ===== */
 
-/* Make the panel full-width on phones; keep a cap on larger mobiles */
-.drawer-panel{
-  right: 0; left: auto;
-  width: min(100vw, 520px);         /* was min(88vw, 420px) */
-  max-width: 100vw;
-  border-left: none;                 /* cleaner edge-to-edge */
-  border-radius: 0;
-  overflow: hidden;                  /* prevent inner overflow clipping */
-  display: flex; flex-direction: column;
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background: #fff;
+  padding: 12px 12px; /* espaço para o botão e logo */
 }
 
-/* If you prefer always edge-to-edge on all mobiles, keep the rule above as-is.
-   If you still want a little overlay on wide mobiles, use: width: min(92vw, 520px); */
+.site-header,
+.header-row{ overflow: visible !important; }
 
-/* Fix a possible typo that can break layout if minified */
-.drawer-head{
-  display:flex; align-items:center; justify-content:space-between;
-  padding: 12px 14px; border-bottom:1px solid var(--border);
+.header-row{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
-/* The scrollable content area (filters) */
-.drawer-filters{
-  flex: 1 1 auto;                    /* fills remaining height under header */
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 12px 14px;
-  display: grid; gap: 10px;
+/* Logo centrado */
+.site-header .brand{
+  margin: 0 auto;
+  text-align: center;
+  flex: 0 0 auto !important;
+  display: flex;
+  align-items: center;
+}
+.site-header .brand img{
+  height: 70px !important;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Inputs full-width inside drawer */
-.drawer-filters input,
-.drawer-filters select,
-.drawer-filters .drp-display{ width: 100%; }
-
-/* Sticky actions at the bottom; never clipped */
-.drawer-actions{
-  position: sticky; bottom: 0;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-  padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); /* iOS chin safe-area */
-  background: linear-gradient(to top, #fff 70%, rgba(255,255,255,.92) 100%);
-  border-top: 1px solid var(--border);
-}
-.drawer-actions .btn{ width: 100%; }
-@media (max-width: 360px){
-  .drawer-actions{ grid-template-columns: 1fr; } /* stack buttons on tiny screens */
-}
-
-/* Date picker touch-ups inside the drawer */
-.drp-display{ text-align: center; }
-
-
-/* Prevent body scroll when drawer is open (you already toggle this class in JS) */
-body.is-drawer-open{ overflow: hidden; }
-
-/* ===== Date range popover inside the drawer (mobile) ===== */
-.drawer-panel { position: relative; }
-
-.drawer .drp-popover.drp--mobile{
+/* Hamburger fixo no canto superior direito */
+.site-header .hamburger{
   position: absolute;
-  left: 12px; right: 12px;
-  top: calc(56px + 6px);          /* below .drawer-head (~56px) */
-  width: auto;
-  max-height: calc(100vh - 56px - 24px);
-  overflow: hidden;               /* we'll scroll the inside */
-  border-radius: 12px;
-  display: block;                 /* override desktop 'display:none' */
+  top: 12px;
+  right: 12px;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 22px; line-height: 1;
+}
+.site-header .hamburger[aria-expanded="true"]{ background:#f3f4f6; }
+
+/* Esconder utilidades do desktop no mobile (apenas dentro do header) */
+.utility-bar{ display: none; }
+.site-header #form-min,
+.site-header .search-pill,
+.site-header .pill-close,
+.site-header .utility-bar,
+.site-header .pill-menu,
+.site-header .pill-actions,
+.site-header .pill-action,
+.site-header #menu-fab{
+  display: none !important;
 }
 
-.drp-popover{ display:flex; flex-direction:column; }  /* safe enhancement */
-.drp-header{ padding-bottom:6px; }
+/* ===== Menu móvel (popover compacto) ===== */
+
+/* Overlay (fecha ao clicar fora) */
+.mobile-drawer{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.25);
+  opacity: 0; pointer-events: none; transition: opacity .18s ease;
+}
+.mobile-drawer.open{ opacity: 1; pointer-events: auto; }
+
+/* Painel como popover, ancorado ao botão */
+.mobile-drawer .panel{
+  position: absolute;
+  top: calc(12px + 40px + 8px); /* padding top + altura botão + gap */
+  right: 12px;
+  bottom: auto;
+  width: 240px;
+  max-height: none;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  padding: 10px;
+  transform: translateY(-6px);
+  transition: transform .18s ease, opacity .18s ease;
+  opacity: 0;
+}
+.mobile-drawer.open .panel{ transform: translateY(0); opacity: 1; }
+
+.mobile-drawer .panel .title{
+  font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;
+}
+.mobile-drawer .panel .mobile-nav{ display: grid; gap: 8px; }
+.mobile-drawer .panel .mobile-nav a{
+  display: block;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none; color: var(--text);
+}
+.mobile-drawer .panel .mobile-nav a.btn-primary{ border-color: transparent; }
+
+/* ===== Datepicker (2 meses em coluna) ===== */
+
+.drp-popover{
+  z-index: 3000 !important;
+  max-width: none;
+  width: calc(100vw - 24px); /* margem de 12px de cada lado */
+}
+
 .drp-calwrap{
   display: grid;
-  grid-template-columns: 1fr;     /* vertical months */
+  grid-template-columns: 1fr; /* meses empilhados */
   gap: 12px;
-  min-width: 0;                   /* kill the desktop 520px min */
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 4px;
-}
-.drp-footer{
-  position: sticky; bottom: 0;
-  background: linear-gradient(#fff, rgba(255,255,255,.92));
-  padding-top: 8px;
-  border-top: 1px solid var(--border);
-  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-}
-@media (max-width: 360px){
-  .drp-footer{ grid-template-columns: 1fr; }
+  min-width: 0 !important; /* override ao desktop */
 }
 
-/* Drawer top links */
-.drawer-links{ padding: 6px 14px 10px; }
-.drawer-links li+li{ border-top: 1px solid var(--border); }
-.drawer-links a{
-  display:block; padding:10px 0; font-weight:600; color: var(--brand-blue);
-  text-decoration: none;
+.drp-cal{ width: 100%; }
+
+/* ===== Form (empilhado + colapsável) ===== */
+
+.search-pill{
+  grid-column: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
 }
-.drawer-links li:nth-child(2) a{ /* Sign up */
-  display:inline-block; border:1px solid var(--brand-blue);
-  border-radius: 10px; padding:8px 12px; margin-top:6px;
-}
-.drawer-links li:nth-child(3) a{ /* Donate */
-  display:inline-block; background: var(--brand-green); color:#fff;
-  border-radius: 10px; padding:8px 12px; margin-top:6px;
+.search-pill.is-collapsed{ display: none; }
+
+.search-pill .field{ display: grid; gap: 6px; }
+.search-pill .lbl{ text-align: left; }
+
+.pill-close{
+  display: inline-flex;
+  align-items: center; justify-content:center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--border); background:#fff;
+  margin-left: auto;
 }
 
-/* “Pick dates” button */
-#m-date.btn{
-  width: 100%; height: 44px; border-radius: 12px; font-weight:600;
-  justify-content: center;
+/* Barra resumo (caso seja usada fora do header) */
+.form-min{
+  display: flex; align-items: center; gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid var(--border); border-radius: 12px;
+  background:#fff; padding: 10px 12px;
+  font: inherit; text-align: left; cursor: pointer;
 }
+.form-min .dot{ width:6px; height:6px; border-radius:50%; background:var(--brand-green); }
+.form-min .txt{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.form-min[aria-expanded="true"]{ background:#f9fafb; }
 
-/* O painel da gaveta cria um contexto de posicionamento */
-.drawer-panel { position: relative; }
+/* ===== Conteúdo / Layout principal ===== */
 
-/* O calendário montado dentro da gaveta (mobile) */
-.drawer .drp-popover.drp--mobile{
-  position: absolute;
-  left: 12px; right: 12px;
-  top: calc(56px + 6px);               /* abaixo do cabeçalho da gaveta */
-  width: auto;
-  max-height: calc(100vh - 56px - 24px);
-  overflow: hidden;
-  border-radius: 12px;
+.hero .container{ padding: 0 12px; }
+.hero-headline{ font-size: clamp(1.4rem, 5vw, 1.8rem); }
+.hero-tagline{ font-size: .95rem; }
+
+.container-two{
+  max-width: 100%;
+  padding: 0 12px;
   display: block;
-  z-index: 500;                         /* acima das ações da gaveta */
-  pointer-events: auto;
+}
+.home-main{ width: 100%; }
+.aside{ position: static; width: 100%; margin-top: 18px; }
+.aside-scroll{ position: static; max-height: none; }
+
+/* ===== Secções / Rails ===== */
+
+.section-head{ gap: 8px; }
+.section-head h2{ font-size: 1.1rem; }
+
+/* Todos os rails em horizontal com snap */
+.section .rail{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 76%;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 6px 2px 8px;
+  scroll-snap-type: x proximity;
+}
+.section .rail > *{ scroll-snap-align: start; }
+
+/* Esconder seta “next” no mobile (scroll com o dedo) */
+.section .rail-next,
+button.rail-next{ display: none !important; }
+
+/* Cards ocupam a largura disponível */
+.card-op,
+.card-submit{
+  width: 100%;
+  min-width: auto;
+  margin: 8px 0;
 }
 
+/* ===== Hotels ===== */
+
+.hotels-rail{ display: grid; gap: 10px; }
+.hotel-card{ display: grid; grid-template-columns: 96px 1fr; gap: 10px; }
+.hotel-card img{ width: 96px; height: 72px; object-fit: cover; }
+
+/* ===== Footer ===== */
+
+.footer-bar{
+  display: grid; gap: 10px;
+  align-items: center;
+  padding: 16px 12px;
+}
+.footer-links{
+  display: flex; flex-wrap: wrap; gap: 10px 14px;
+  padding: 0; margin: 0; list-style: none;
+}
+.footer-links a{ white-space: nowrap; }
+.footer-copy{ text-align: right; }
+
+
+/* === Fix 1: Header sempre visível no topo (mobile) === */
+:root{ --m-header-h: 94px; } /* ~70px do logo + 24px de padding vertical */
+
+.site-header{
+  position: fixed;      /* em vez de sticky */
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 1100;        /* abaixo do calendário (3000) */
+}
+
+/* Dá espaço ao conteúdo para não ir por baixo do header fixo */
+body,
+.home-wrap,
+.container-two{
+  padding-top: var(--m-header-h) !important;
+}
+
+/* altura mínima coerente para a linha do header */
+.header-row{
+  min-height: calc(var(--m-header-h) - 24px); /* header - padding vertical (12+12) */
+}
+
+
+/* === Fix 2: Logo perfeitamente centrado, independentemente do hamburger === */
+.header-row{ position: relative; }
+
+.site-header .brand{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;                  /* ignora auto-centering via margens */
+  flex: 0 0 auto !important;  /* não estica */
+}
+
+.site-header .brand img{
+  max-height: 70px;   /* limite de altura */
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+/* O hamburger mantém-se no canto superior direito como já tens */
+.site-header .hamburger{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.hero .container{
+  padding-top: 12px;   /* em vez de herdar demasiado padding */
+  padding-bottom: 12px;
+}
+.hero-tagline{ margin-bottom: 0.5rem; } /* mais compacto */
+
+body{ padding-top: var(--m-header-h) !important; }  /* mantém o espaçamento global */
+.home-wrap,
+.container-two{ padding-top: 0 !important; }        /* NÃO somar offset aqui */
+
+/* === Logo: rácio intacto e nitidez no mobile (override total) === */
+.site-header .brand img{
+  max-width: none !important;  /* ignora max-width:100% global */
+  width: auto !important;      /* largura pela proporção natural */
+  height: auto !important;     /* altura pela proporção natural */
+  max-height: 70px !important; /* limite de altura sem distorcer */
+  object-fit: contain !important; /* só por segurança, não recorta */
+  image-rendering: auto;       /* nitidez normal */
+}
