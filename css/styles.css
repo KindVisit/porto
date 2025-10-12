@@ -1,5 +1,5 @@
 /* ===========================
-   KindVisit — Global Styles
+   ImpactTrip — Global Styles
    =========================== */
 
 /* ── Theme Variables ───────────────────────────────────────────── */
@@ -119,12 +119,6 @@ body::before{
 
 .header-actions{
   justify-self:end;
-}
-@media (max-width:900px){
-  .utility-bar{ position:static; width:100%; }
-  .utility-inner{ width:100%; padding:6px 0 0; justify-content:center; gap:12px; }
-  .header-row{ display:flex; flex-direction:column; gap:12px; }
-  .brand img{ height:56px; }
 }
 
 /* distance between top of page and the pill+logo block */
@@ -269,7 +263,7 @@ body::before{
 .container-two{
   max-width:1400px; margin:0 auto; padding:0 20px;
   display:block;
-  padding-right:calc(var(--aside-w) + 40px);
+  padding-right:calc(var(--aside-w) + var(--aside-gap));
 }
 @media (min-width:1600px){
   .container-two{ max-width:1800px; }
@@ -279,7 +273,7 @@ body::before{
 .section-head h2{ margin:0; font-size:1.25rem; }
 .rail-next{ border:1px solid var(--border); background:#fff; border-radius:999px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
 .section-sep{ height:2px; background:linear-gradient(90deg,#24466F 0%,#83B341 100%); opacity:.6; margin:24px 0; }
-.rail{ display:grid; grid-auto-flow:column; grid-auto-columns:300px; gap:16px; overflow-x:auto; padding:6px 0p 2px; scroll-snap-type:x proximity; }
+.rail{ display:grid; grid-auto-flow:column; grid-auto-columns:300px; gap:16px; overflow-x:auto; padding:6px 0 2px; scroll-snap-type:x proximity; }
 .rail > *{ scroll-snap-align:start; }
 
 /* Cards */
@@ -407,20 +401,6 @@ body::before{
 .hotel-ad .cta{ display:none }  /* hide learn more */
 
 
-/* ===== Responsive ===== */
-@media (max-width:1100px){
-  .home-aside{
-    position: static;
-    width: auto;
-    margin: 20px 0 0 0;
-    height:auto;
-  }
-  .home-aside .aside-scroll{
-    max-height:70vh; overflow:auto;
-  }
-}
-
-
 /* ===========================
    Footer
    =========================== */
@@ -531,12 +511,6 @@ footer{
 .opm-tags span{ display:inline-block; }
 .opm-actions{ display:flex; justify-content:flex-end; gap:10px; margin-top:10px; }
 
-/* Small screens */
-@media (max-width:700px){
-  .modal-card{ margin:4vh 12px; padding:12px; }
-  .opm-header{ grid-template-columns:80px 1fr auto; }
-  .opm-header img{ width:80px; height:60px; }
-}
 
 .card-submit{
   border: 1.5px solid var(--brand-blue);
@@ -578,10 +552,16 @@ footer{
   transform: translateY(0);
 }
 
-/* Hide mobile-only controls on desktop */
-@media (min-width: 901px){
-  #hamburger,
-  #form-min,
-  #pill-close,
-  #mobile-drawer { display: none; }
+
+/* Desktop: hide hamburger + drawer by default */
+.hamburger{ display: none; }
+
+.drawer{ display: none; }       /* drawer is hidden unless 'open' */
+.drawer.open{ display: block; } /* shown only when JS toggles .open */
+
+/* Make sure the desktop utility bar is visible on desktop */
+.utility-bar{
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
