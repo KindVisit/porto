@@ -51,37 +51,46 @@
 </footer>
 
 <script>
-/*
-  This script automatically lists all PDFs inside the /docs folder.
-  It fetches the folder index (works on GitHub Pages, Netlify, Firebase hosting if directory listing is enabled).
-*/
 async function loadPDFs() {
   const container = document.getElementById('pdf-list');
+
+  // helper to turn "my-file.pdf" into "My file"
+  const pretty = (name) =>
+    name.replace(/\.pdf$/i, '')
+        .replace(/[-_]+/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+
   try {
-    const response = await fetch('docs/');
-    const html = await response.text();
+    const res = await fetch('docs/list.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('list.json not found');
+    const items = await res.json();
 
-    // Extract .pdf filenames from the directory listing
-    const matches = [...html.matchAll(/href="([^"]+\.pdf)"/gi)];
-    const files = matches.map(m => decodeURIComponent(m[1]));
+    container.innerHTML = '';
 
-    container.innerHTML = ''; // clear loading text
-
-    if (files.length === 0) {
+    if (!Array.isArray(items) || items.length === 0) {
       container.innerHTML = '<li class="muted">No documents found.</li>';
       return;
     }
 
-    files.forEach(file => {
-      const name = file.split('/').pop();
-      const displayName = name.replace(/[-_]/g, ' ').replace(/\.pdf$/i, '');
+    for (const it of items) {
+      const file = (it && it.file) ? it.file : '';
+      if (!file.toLowerCase().endsWith('.pdf')) continue;
+
+      const title = (it && it.title) ? it.title : pretty(file);
+
       const li = document.createElement('li');
-      li.innerHTML = `<a href="docs/${name}" target="_blank" class="btn btn-outline">📄 ${displayName}</a>`;
+      li.innerHTML = `<a href="docs/${encodeURIComponent(file)}"
+                         target="_blank"
+                         class="btn btn-outline">📄 ${title}</a>`;
       container.appendChild(li);
-    });
+    }
+
+    if (!container.children.length) {
+      container.innerHTML = '<li class="muted">No documents found.</li>';
+    }
   } catch (err) {
-    container.innerHTML = '<li class="muted">Unable to load documents.</li>';
     console.error('Error loading PDFs:', err);
+    container.innerHTML = '<li class="muted">Unable to load documents.</li>';
   }
 }
 
