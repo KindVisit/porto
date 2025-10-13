@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Documents – KindVisit</title>
+  <meta name="description" content="Official KindVisit documents, reports, and resources." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 900px)">
+  <link rel="icon" type="image/png" href="assets/favicon-32.png">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="header-row">
+    <a class="brand" href="index.html">
+      <img src="assets/logoh.png" alt="KindVisit" />
+    </a>
+  </div>
+</header>
+
+<main class="container-two" style="padding-top:calc(var(--header-offset) + 40px);">
+  <section class="section">
+    <div class="section-head">
+      <h2>Documents & Resources</h2>
+    </div>
+    <p class="muted">All available PDFs are listed below. Click to view or download.</p>
+
+    <ul id="pdf-list" style="list-style:none; padding:0; margin-top:20px; display:grid; gap:12px;">
+      <li class="muted">Loading documents...</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-bar">
+    <ul class="footer-links">
+      <li><a href="index.html">Opportunities</a></li>
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">Impact</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Submit your project</a></li>
+      <li><a href="#">NGO onboarding</a></li>
+      <li><a href="#">Hotels & Agencies</a></li>
+      <li><a href="#">Press kit</a></li>
+      <li><a href="documents.html">Documents</a></li>
+    </ul>
+    <div class="footer-copy">© KindVisit 2025</div>
+  </div>
+</footer>
+
+<script>
+/*
+  This script automatically lists all PDFs inside the /docs folder.
+  It fetches the folder index (works on GitHub Pages, Netlify, Firebase hosting if directory listing is enabled).
+*/
+async function loadPDFs() {
+  const container = document.getElementById('pdf-list');
+  try {
+    const response = await fetch('docs/');
+    const html = await response.text();
+
+    // Extract .pdf filenames from the directory listing
+    const matches = [...html.matchAll(/href="([^"]+\.pdf)"/gi)];
+    const files = matches.map(m => decodeURIComponent(m[1]));
+
+    container.innerHTML = ''; // clear loading text
+
+    if (files.length === 0) {
+      container.innerHTML = '<li class="muted">No documents found.</li>';
+      return;
+    }
+
+    files.forEach(file => {
+      const name = file.split('/').pop();
+      const displayName = name.replace(/[-_]/g, ' ').replace(/\.pdf$/i, '');
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="docs/${name}" target="_blank" class="btn btn-outline">📄 ${displayName}</a>`;
+      container.appendChild(li);
+    });
+  } catch (err) {
+    container.innerHTML = '<li class="muted">Unable to load documents.</li>';
+    console.error('Error loading PDFs:', err);
+  }
+}
+
+loadPDFs();
+</script>
+</body>
+</html>
