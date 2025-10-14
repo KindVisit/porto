@@ -1,5 +1,13 @@
 [
-  { "file": "businessmodelcanvas.pdf",        "title": "Business model canvas" },
-  { "file": "Customer Profile Analysis.pdf", "title": "Customer Profile Analysis" },
-  { "file": "Market.pdf",       "title": "Market" }
+  { "file": "businessmodelcanvas.pdf",         "title": "Business model canvas" },
+  { "file": "Customer Profile Analysis.pdf",   "title": "Customer Profile Analysis" },
+  { "file": "Market.pdf",                      "title": "Market" }
+  { "file": "Value Proposition.pdf",           "title": "Value Proposition" }
+  { "file": "Personas.pdf",                      "title": "Personas" }
+  { "file": "Stakeholders.pdf",                      "title": "Stakeholders" }
+  { "file": "Revenue Streams.pdf",                      "title": "Revenue Streams" }
+  { "file": "Pricing.pdf",                      "title": "Pricing" }
+  { "file": "Partnerships & Funding.pdf",                      "title": "Partnerships & Funding" }
+  { "file": "Understanding Product–Market Fit.pdf",                      "title": "Understanding Product–Market Fit" }
+  { "file": "Key Metrics.pdf",                      "title": "Key Metrics" }
 ]
